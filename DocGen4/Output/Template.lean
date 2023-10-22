@@ -49,7 +49,7 @@ def baseHtmlGenerator (title : String) (site : Array Html) : BaseHtmlM Html := d
           <p class="header_filename break_within">[breakWithin title]</p>
           <form action="https://google.com/search" method="get" id="search_form">
             <input type="hidden" name="sitesearch" value="https://leanprover-community.github.io/mathlib4_docs"/>
-            <input type="text" name="q" autocomplete="off"/>&#32;
+            <input type="text" name="q" autocomplete="off" autocorrect="off" autocapitalize="none" autofocus/>&#32;
             <button id="search_button" onclick={s!"javascript: form.action='{← getRoot}search.html';"}>Search</button>
             <button>Google site search</button>
           </form>
